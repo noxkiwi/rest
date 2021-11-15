@@ -1,0 +1,33 @@
+{
+  "name": "noxkiwi/rest",
+  "description": "I am the basic REST application.",
+  "version": "1.0.0",
+  "type": "package",
+  "license": "proprietary",
+  "keywords": [
+    "rest",
+    "JSON"
+  ],
+  "homepage": "https://nox.kiwi/",
+  "time": "2020-09-25",
+  "authors": [
+    {
+      "name": "Jan Nox",
+      "email": "jan.nox@pm.me",
+      "homepage": "https://nox.kiwi",
+      "role": "Lead Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.0.0",
+    "noxkiwi/core": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  },
+  "autoload": {
+    "psr-4": {
+      "noxkiwi\\rest\\": "backend/class/"
+    }
+  }
+}
