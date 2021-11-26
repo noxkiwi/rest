@@ -8,6 +8,12 @@ use noxkiwi\core\Request;
 use noxkiwi\core\Response;
 use noxkiwi\rest\Exception\ForbiddenHttpMethodException;
 use noxkiwi\rest\Response\RestResponse;
+use function filter_input;
+use function header;
+use function in_array;
+use function strtolower;
+use function ucfirst;
+use const E_USER_NOTICE;
 use const FILTER_SANITIZE_SPECIAL_CHARS;
 use const INPUT_SERVER;
 
