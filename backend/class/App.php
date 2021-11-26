@@ -4,6 +4,10 @@ namespace noxkiwi\rest;
 use JetBrains\PhpStorm\NoReturn;
 use noxkiwi\core\Constants\Mvc;
 use noxkiwi\core\Request;
+use function explode;
+use function file_get_contents;
+use function json_decode;
+use function parse_str;
 
 /**
  * I am the basic REST app
