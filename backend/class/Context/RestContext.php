@@ -70,6 +70,14 @@ abstract class RestContext extends Context
         exit(200);
     }
 
+    /**
+     * Based on the given $request, I will call the correct
+     * method for the given REQUEST_METHOD.
+     *
+     * @param \noxkiwi\core\Request $request
+     *
+     * @return \noxkiwi\core\Request
+     */
     final protected function methodController(Request $request): Request
     {
         $this->request->set(Mvc::TEMPLATE, 'json');
@@ -162,6 +170,11 @@ abstract class RestContext extends Context
         throw new ForbiddenHttpMethodException('Method PATCH is not allowed', E_USER_NOTICE);
     }
 
+    /**
+     * I will set the response type to the given one.
+     *
+     * @param string $responseType
+     */
     final protected function setResponseType(string $responseType): void
     {
         if (! in_array($responseType, self::RESPONSE_TYPES, true)) {
@@ -170,11 +183,21 @@ abstract class RestContext extends Context
         $this->response->type = $responseType;
     }
 
+    /**
+     * I will set the response type to success.
+     *
+     * @param bool $success
+     */
     final protected function setResponseSuccess(bool $success = true): void
     {
         $this->response->success = $success;
     }
 
+    /**
+     * I will add an arbitrary response message.
+     *
+     * @param string $message
+     */
     final protected function addResponseMessage(string $message): void
     {
         $this->response->messages [] = $message;
